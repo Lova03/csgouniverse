@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow: hidden;
+  background-color: rgb(24, 24, 27);
+}
+
+#meteor-0 {
+  --finish-x-0: 0;
+}
+#meteor-1 {
+  --finish-x-1: 0;
+}
+#meteor-2 {
+  --finish-x-2: 0;
+}
+#meteor-3 {
+  --finish-x-3: 0;
+}
+#meteor-4 {
+  --finish-x-4: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(35, 35, 38);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(64, 64, 69);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 83, 88);
+}
+
+::-moz-scrollbar-button:decrement,
+::-moz-scrollbar-button:increment,
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment {
+  width: 0px;
+}
+
+.text-shadow-outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.text-shadow-outline-white {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+@layer components {
+  .header-social {
+    @apply cursor-pointer relative flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-md md:rounded-xl transition-all duration-200 bg-red-700/50 hover:rounded-md hover:bg-red-500/50;
+  }
+  .header-tooltip {
+    @apply transition-all cursor-default duration-75 scale-0 absolute top-[110%] py-1 px-2 bg-zinc-700/70 rounded-md text-sm text-slate-200 peer-hover:scale-100;
+  }
+  .navitem {
+    @apply h-8 sm:h-12 flex relative space-x-4 items-center justify-between;
+  }
+  .navitem-icon {
+    @apply h-8 sm:h-12 w-8 sm:w-12 flex relative items-center justify-center bg-red-900/70 cursor-pointer group-hover:bg-red-900/60;
+  }
+  .navitem-tooltip {
+    @apply transition-all duration-75 scale-0 absolute left-[110%] py-1 px-2 bg-zinc-700/70 rounded-md text-sm text-slate-200 group-hover:scale-100;
+  }
+  .navitem-text {
+    @apply absolute items-center h-8 sm:h-12 w-44 sm:w-52 pl-2 left-4 sm:pl-4 sm:left-8 transition-all duration-100 cursor-pointer group-hover:bg-zinc-900/90;
+  }
+  .trade-button {
+    @apply rounded-md mt-2 bg-zinc-600 px-3 h-8 shadow-lg cursor-pointer;
+  }
+  .userpanelitem {
+    @apply flex items-center h-9 px-2 space-x-2 cursor-pointer transition-all duration-200 hover:text-rose-800; /*hover:bg-[#1F1F22]*/
+  }
+  .formitemtag {
+    @apply rounded-md drop-shadow-md whitespace-nowrap mx-1 mt-1 px-2 py-1 shadow-sm;
+  }
+}
+/* @layer base {
+  html {
+    font-family: 'Red Hat Display', sans-serif;
+  }
+} */
